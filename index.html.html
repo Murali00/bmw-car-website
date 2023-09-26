@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Grid layout</title>
+
+
+	
+
+	<style>
+		body{
+			max-width: 100vw;
+			background-image: linear-gradient(rgb(124, 165, 255),rgb(161, 248, 161),rgb(179, 179, 253));
+		}
+
+
+		.head { grid-area: header; }
+		.nav {grid-area: nav;}
+		.menu { grid-area: bar; }
+		.body { grid-area: body; }
+		.ad { grid-area: adverticement; }
+		.foot { grid-area: footer; }
+
+		.container {
+			display: grid;
+			grid-template-areas: 
+			'header header header header header header'
+			'nav nav nav nav nav nav'
+			'bar body body body body adverticement' 
+			'bar body body body body adverticement'
+			'footer footer footer footer footer footer';
+			gap: 10px;
+			background-color: rgb(224, 255, 245);
+			grid-template-columns: 0.6fr 1fr 1fr 1fr 0.7fr 0.8fr;
+
+		}
+		.container > div {
+			background-color: rgb(221, 253, 255);
+		
+			padding: 10px;
+			
+		}
+
+		div.head{
+			
+			height: 70px;
+			background-color: aqua;
+		}
+		.head > img{
+			padding-left: 10px;
+		}
+
+		.head > h1 { 
+			margin: 0%;
+			text-align: center;
+			font-size: 60px;	
+			text-shadow: 2px 3px 4px black;
+
+		}
+
+		div.nav{
+			background-color: rgb(187, 187, 187);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 10px;
+		}
+
+		.nav > a{
+			text-decoration: none;
+			display: inline;
+			padding-left: 30px;
+			padding-right: 30px;
+			font: bold;
+		}
+
+		div.body{
+			height:1160px;
+			width: 600px;
+		}
+
+		body > img{
+			height: 300px;
+			width: 500px;
+	
+		}
+		
+		.body{
+			margin-top: 0;
+			
+		}
+
+		div.ad{
+			width:100px;
+		}
+
+		.ad > img{
+			width: 150px;
+		}
+
+		@media screen and (max-width:700px) {
+			.container {
+			display: grid;
+			grid-template-areas: 
+			'header header header header header header'
+			'nav nav nav nav nav nav'
+			'bar bar bar bar bar bar' 
+			'body body body body body body'
+			'adverticement adverticement adverticement adverticement adverticement adverticement'
+			'footer footer footer footer footer footer';
+			gap: 10px;
+			background-color: rgb(177, 177, 177);
+
+		}
+			div.nav{
+			background-color: rgb(187, 187, 187);
+			display: flex;
+			flex-direction: column;
+			text-align: end;
+			padding: 20px;
+		}	
+		
+		
+		.nav > a:hover{
+			background-color:burlywood ;
+
+			
+		}
+	}
+	
+	.foot > h3{
+		text-align: center;
+	}
+
+	div.foot{
+		width: 98%;
+		height: 120px;
+	}
+
+	.foot > a{
+		float: right;
+		
+	}
+
+	
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="head">
+			<img src="https://cdn.freebiesupply.com/logos/large/2x/bmw-2-logo-png-transparent.png" width="70px" height="70px" style="float: left;" alt="" >
+			<h1> BMW </h1>
+		</div>
+
+		<div class="nav">
+			<a href="">Home</a>
+			<a href="">About</a>
+			<a href="">New-cars</a>
+			<a href="">Pre-owned cars</a>
+			<a href="">Services</a>
+			<a href="">Explore</a>
+			<a href="">Buy now</a>
+		</div>
+
+
+		<div class="menu">
+			<h2><u> Model cars</u></h2>
+			
+			<h3>1.Sedan</h3>
+			<ul>
+				<li>BMW M340i</li>
+				<li>BMW 3 Series</li>
+				<li>BMW 7 Series</li>
+				<li>BMW 5 Series</li>
+				<li> BMW 3 Series</li>
+				<li>BMW 6 series GT</li>
+				<li>BMW i7</li>
+				<li>BMW i4</li>
+				<li>BMW M5</li>
+				<li>BMW 300d</li>
+			</ul>
+
+			<h3>2.SUV</h3>
+
+			<ul>
+				<li> BMW X1</li>
+				<li>BMW X7</li>
+				<li>BMW X6</li>
+				<li>BMW X5</li>
+				<li> BMW X3</li>
+				<li>BMW X5M</li>
+				<li>BMW ix</li>
+			</ul>
+
+			<h3>3.Convertaible</h3>
+
+			<ul>
+				<li>BMW Z4</li>
+			</ul>
+
+			
+			
+		</div>
+
+		<div class="body">
+			<img src="https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/Z4/6880/1675665940464/front-left-side-47.jpg?tr=w-420"  alt="">
+
+			<h3>Model-Z4</h3>
+			<p>The E89 Z4 was the first Z Series model to use a retractable hardtop roof, which meant that there were no longer separate roadster and coupé versions of the car. There was no Z4 M model for the E89 generation. The Z4 (E89) was succeeded by the Z4 (G29) in 2018.</p>
+			<h3>Success story:</h3>
+			<p>BMW is one of the world’s oldest brands (107 this year), and one of the most innovative car manufacturers in the world.
+
+				Cutting-edge automotive design, performance and technology becomes reality with every BMW model. Innovation is the foundation on which BMW was built and it’s the power driving the brand forward. Technological breakthroughs provide drivers with a one-of-a-kind immersive in-car experience which BMW is known for.
+				
+				Before we talk about BMW’s present and the brand’s vision of the future, let’s revisit the past and discover how it all started.</p>
+		
+
+				<h3>BMW Convertible Cars In India</h3>
+				<p>In 2023, there are 1 BMW Convertible cars available in India. Some of the popular BMW Convertible cars are BMW Z4. You can check details like versions, images, specs, and expected price for all BMW Convertible cars in the below list</p>
+				<p>The 2019 BMW Z4 was spotted testing recently. This time around the German car manufacturer has revealed its plans to commence the Z4 production later this year. The new model will first be launched..</p>
+				<p>The BMW Z4 Concept emerged as the centre of attraction at the German automaker's stall at the Frankfurt Motor Show 2017. As seen in images, the car flaunts a short rear deck, long hood, compact..</p>
+		
+		
+			</div>
+
+		<div class="ad">
+
+			<h2>Advertisement</h2>
+
+			<img src="https://thumbs.dreamstime.com/b/vertical-shot-bmw-e-d-autumn-trees-background-260293446.jpg" width="150px" alt="">
+			<p>Bmw is a popular brand in the world.</p>
+			<img src="https://images.unsplash.com/photo-1616455164843-dc474e264ba6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjB8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80" alt="">
+			<p> the BMW Group is one of the world's leading premium manufacturers of automobiles and motorcycles and also provides premium financial and mobility services.</p>
+
+			<img src="https://thumbs.dreamstime.com/b/vertical-shot-black-bmw-car-drift-written-license-plate-vertical-shot-black-bmw-car-drift-written-262377723.jpg" alt="">
+			<p>BMW is a Luxury car.</p>
+		</div>
+
+
+		<div class="foot">
+
+			<h3>Contact us</h3>
+
+			<p style="float: left;" >Email:muralitharan415@gmail.com</p>
+			<a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/1024px-Facebook_icon.svg.png" alt="" width="30px" height="30px"></a>
+		</div>
+		
+
+		
+
+
+	</div>
+	
+</body>
+</html>
+  
